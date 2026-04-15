@@ -1,2 +1,2 @@
 # fitpass_classes
-modelagem de daods fitpass
+modelagem de dados fitpass
