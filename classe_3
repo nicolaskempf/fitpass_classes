@@ -1,0 +1,192 @@
+# Classes do Sistema — FitPass Gym Management
+
+Este documento descreve as principais classes do sistema, seus atributos e responsabilidades, com base nos requisitos funcionais.
+
+## Aluno
+
+Responsável por representar o usuário da academia.
+
+Atributos:
+
+* idAluno
+* nome
+* cpf
+* email
+* telefone
+* rfid
+* status
+
+Responsabilidade:
+
+* Manter dados do aluno
+* Verificar regularidade de pagamento
+
+---
+
+## Endereco
+
+Representa o endereço do aluno.
+
+Atributos:
+
+* rua
+* numero
+* bairro
+* cidade
+* cep
+
+---
+
+## Plano
+
+Representa os planos oferecidos pela academia.
+
+Atributos:
+
+* idPlano
+* nome
+* tipo
+* valor
+* ativo
+
+Responsabilidade:
+
+* Gerenciar tipos de planos disponíveis
+
+---
+
+## Pagamento
+
+Controla os pagamentos realizados pelos alunos.
+
+Atributos:
+
+* idPagamento
+* data
+* valor
+* formaPagamento
+* status
+
+Responsabilidade:
+
+* Registrar pagamentos
+
+---
+
+## Acesso
+
+Controla a entrada do aluno na academia.
+
+Atributos:
+
+* idAcesso
+* dataHora
+* autorizado
+
+Responsabilidade:
+
+* Validar acesso via RFID
+
+---
+
+## Aula
+
+Representa as aulas disponíveis.
+
+Atributos:
+
+* idAula
+* nome
+* horario
+* capacidadeMaxima
+
+---
+
+## Agendamento
+
+Controla a reserva de aulas.
+
+Atributos:
+
+* idAgendamento
+* dataReserva
+* status
+
+Responsabilidade:
+
+* Permitir reserva de vagas
+
+---
+
+## Presenca
+
+Registra a presença do aluno nas aulas.
+
+Atributos:
+
+* idPresenca
+* data
+* presente
+
+---
+
+## AvaliacaoFisica
+
+Armazena dados de avaliação física do aluno.
+
+Atributos:
+
+* idAvaliacao
+* data
+* peso
+* imc
+* percentualGordura
+* observacoes
+* anexo
+
+---
+
+## Notificacao
+
+Responsável por envio de notificações.
+
+Atributos:
+
+* idNotificacao
+* tipo
+* dataEnvio
+* status
+* mensagem
+
+---
+
+## Funcionario (abstrata)
+
+Classe base para funcionários.
+
+Atributos:
+
+* idFuncionario
+* nome
+
+---
+
+## Instrutor
+
+Responsável por ministrar aulas e avaliações.
+
+Atributos:
+
+* especialidade
+
+---
+
+## Recepcionista
+
+Responsável por cadastro e pagamentos.
+
+---
+
+## Gerente
+
+Responsável pela gestão e relatórios.
